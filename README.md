@@ -45,7 +45,7 @@ http://127.0.0.1:8000/docs
 http://127.0.0.1:8000/redoc
 ```
 
-# Basic Commands
+## Path Parameter and  Query Parameter
 To test path paramentes:
 ```
 http://127.0.0.1:8000/{url}/{parameter_name}
@@ -66,10 +66,20 @@ Example:
 ```
 http://127.0.0.1:8000/component/?number=3&text=test
 ```
-You can also test in FastAPI swagger UI http://127.0.0.1:8000/docs <br \>
+You can also test in FastAPI swagger UI http://127.0.0.1:8000/docs  
+
 If Optional field is used then the text field can left blank but the key has to be present
 ```
 http://127.0.0.1:8000/component/?number=3&text=
 ```
-http://127.0.0.1:8000/component/?number=3 will give error <br \>
+http://127.0.0.1:8000/component/?number=3 will give error  
+
 {"detail":[{"loc":["query","text"],"msg":"field required","type":"value_error.missing"}]}
+
+## Pydantic BaseMode
+
+Pydantic is a python library with data validations using type annotations.
+To use pydantic in main1.py import the dependency
+```
+from pydantic import BaseModel
+```

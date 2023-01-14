@@ -1,4 +1,4 @@
-# helps us to find what type something is 
+# Type Annotation: helps us to find what type something is.
 from typing import Optional
 
 # import fasiapi class because we need to import all the necessary functionality
