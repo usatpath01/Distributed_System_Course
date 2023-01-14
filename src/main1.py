@@ -15,3 +15,9 @@ app = FastAPI()
 @app.post("/package/")
 async def make_package(package: Package):
     return package
+
+# To combine BaseModel with path parameters
+@app.post("/package1/{package_priority}")
+async def make_package(package_priority: int, package: Package, value: bool):   # To set the priority of the package 
+    return {"package_priority": package_priority, **package.dict(), "value": value} 
+    # Two astrick for dictionary

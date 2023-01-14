@@ -83,3 +83,9 @@ To use pydantic in main1.py import the dependency
 ```
 from pydantic import BaseModel
 ```
+![Post API](images/postapi.png)
+![Post Response](images/postresponse.png)
+
+Pydantic with Path Query
+![Post Request](images/pydantic_req.png)
+![Post Response](images/pydantic_res.png)
