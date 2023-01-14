@@ -66,11 +66,10 @@ Example:
 ```
 http://127.0.0.1:8000/component/?number=3&text=test
 ```
-You can also test in FastAPI swagger UI
-http://127.0.0.1:8000/docs
+You can also test in FastAPI swagger UI http://127.0.0.1:8000/docs <br \>
 If Optional field is used then the text field can left blank but the key has to be present
 ```
 http://127.0.0.1:8000/component/?number=3&text=
 ```
-http://127.0.0.1:8000/component/?number=3 will give error\\
+http://127.0.0.1:8000/component/?number=3 will give error <br \>
 {"detail":[{"loc":["query","text"],"msg":"field required","type":"value_error.missing"}]}
