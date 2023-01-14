@@ -1,4 +1,6 @@
 # Distributed_System_Course
+## Part 1 - Getting Familiar with FastAPI
+### Basic Installation
 Framework: FastAPI
 1. Install virtualenv (Optional) - If you do not want to install dependencies globally on to the computer.
 ```
@@ -26,7 +28,7 @@ pip3 install uvicorn
 uvicorn main:app --reload
 ```
 
-6. Browse
+6. To test whether it is running, go to browser and paste
 ```
 http://127.0.0.1:8000
 ```
@@ -37,3 +39,38 @@ http://127.0.0.1:8000/docs
 ```
 ![FastAPI Docs](images/fastapi.png)
 
+
+8. FastAPI redoc (Read-Only)
+```
+http://127.0.0.1:8000/redoc
+```
+
+# Basic Commands
+To test path paramentes:
+```
+http://127.0.0.1:8000/{url}/{parameter_name}
+```
+Example
+```
+http://127.0.0.1:8000/component/fastapi
+http://127.0.0.1:8000/component/1
+```
+You can also test in FastAPI swagger UI
+http://127.0.0.1:8000/docs
+
+To test query parameters:
+```
+http://127.0.0.1:8000/{url}/{query}
+```
+Example:
+```
+http://127.0.0.1:8000/component/?number=3&text=test
+```
+You can also test in FastAPI swagger UI
+http://127.0.0.1:8000/docs
+If Optional field is used then the text field can left blank but the key has to be present
+```
+http://127.0.0.1:8000/component/?number=3&text=
+```
+http://127.0.0.1:8000/component/?number=3 will give error\\
+{"detail":[{"loc":["query","text"],"msg":"field required","type":"value_error.missing"}]}
